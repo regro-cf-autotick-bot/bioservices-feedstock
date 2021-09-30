@@ -1,5 +1,5 @@
 {% set name = "bioservices" %}
-{% set version = "1.7.12" %}
+{% set version = "1.8.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
-  sha256: 2edb1909cda7a2aa372ff53ec024ba0b8a9cb3a52d5bdf882a3e833737d8df59
+  sha256: ad9147885d92bdbe31cee4eec29a795ec0c9dbcfb373998f1e44f4354f3512ca
 
 build:
   number: 0
