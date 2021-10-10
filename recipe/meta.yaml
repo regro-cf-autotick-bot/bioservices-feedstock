@@ -30,7 +30,7 @@ requirements:
     - python >=3.6
     - requests
     - requests_cache
-    - suds-jurko
+    - suds-community
     - wrapt
     - xmltodict
 
