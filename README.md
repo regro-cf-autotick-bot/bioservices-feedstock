@@ -1,13 +1,15 @@
-About bioservices
-=================
-
-Home: http://github.com/cokelaer/bioservices
-
-Package license: GPL-3.0-only
+About bioservices-feedstock
+===========================
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/bioservices-feedstock/blob/main/LICENSE.txt)
 
+Home: https://github.com/cokelaer/bioservices
+
+Package license: GPL-3.0-only
+
 Summary: Access to Biological Web Services from Python
+
+Documentation: https://bioservices.readthedocs.io/en/main/
 
 Current build status
 ====================
@@ -143,5 +145,5 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@hadim](https://github.com/hadim/)
+* [@mencian](https://github.com/mencian/)
 
