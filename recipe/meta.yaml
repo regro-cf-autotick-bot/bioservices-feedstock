@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/bioservices-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps -vv
   entry_points:
@@ -19,10 +19,10 @@ build:
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - beautifulsoup4
     - click
@@ -40,6 +40,8 @@ requirements:
     - xmltodict
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bioservices
     - bioservices.apps
