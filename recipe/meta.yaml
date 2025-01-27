@@ -1,7 +1,7 @@
 {% set name = "BioServices" %}
 {% set version = "1.12.0" %}
 {% set sha256 = "55b9ec9a44f6c9bb8aafbf017d724c1672e59d5291e6ea6c2f31facdf8b4bfa3" %}
-{% set python_min = "3.8" %}
+{% set python_min = "3.9" %}
 
 package:
   name: {{ name|lower }}
@@ -55,6 +55,7 @@ about:
   home: https://github.com/cokelaer/bioservices
   summary: "Access to Biological Web Services from Python."
   license: GPL-3.0-only
+  license_family: GPL3
   license_file: LICENSE
   doc_url: https://bioservices.readthedocs.io/en/main
   dev_url: https://github.com/cokelaer/bioservices
