@@ -22,7 +22,7 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools
+    - poetry-core
   run:
     - python >={{ python_min }}
     - appdirs
