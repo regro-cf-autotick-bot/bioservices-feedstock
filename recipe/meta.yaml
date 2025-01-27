@@ -1,7 +1,7 @@
 {% set name = "BioServices" %}
 {% set version = "1.12.0" %}
 {% set sha256 = "55b9ec9a44f6c9bb8aafbf017d724c1672e59d5291e6ea6c2f31facdf8b4bfa3" %}
-{% set python_min = "3.9" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-build-isolation -no-cache-dir -vvv
+  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-build-isolation --no-cache-dir -vvv
   entry_points:
     - bioservices=bioservices.main:main
 
