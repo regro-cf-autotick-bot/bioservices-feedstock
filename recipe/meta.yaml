@@ -13,16 +13,17 @@ source:
 build:
   number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps -vv
+  script: {{ PYTHON }} -m pip install . --use-pep517 --no-deps --no-build-isolation -no-cache-dir -vvv
   entry_points:
     - bioservices=bioservices.main:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
+    - setuptools
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - appdirs
     - beautifulsoup4
     - click
@@ -49,10 +50,11 @@ test:
 
 about:
   home: https://github.com/cokelaer/bioservices
-  summary: Access to Biological Web Services from Python
+  summary: "Access to Biological Web Services from Python."
   license: GPL-3.0-only
   license_file: LICENSE
-  doc_url: https://bioservices.readthedocs.io/en/main/
+  doc_url: https://bioservices.readthedocs.io/en/main
+  dev_url: https://github.com/cokelaer/bioservices
 
 extra:
   recipe-maintainers:
