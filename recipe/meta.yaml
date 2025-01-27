@@ -1,6 +1,7 @@
 {% set name = "BioServices" %}
 {% set version = "1.12.0" %}
 {% set sha256 = "55b9ec9a44f6c9bb8aafbf017d724c1672e59d5291e6ea6c2f31facdf8b4bfa3" %}
+{% set python_min = "3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -41,6 +42,8 @@ requirements:
     - xmltodict
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - bioservices
     - bioservices.apps
